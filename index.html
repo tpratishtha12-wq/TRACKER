@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>📘 Class 12 Study Tracker</h1>
+      <p>Plan, focus, revise, and improve every day.</p>
+      <div class="streak">🔥 Current streak: <span id="streakDays">0</span> days</div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Daily Study Planner</h2>
+        <div class="row">
+          <input id="planSubject" placeholder="Subject" />
+          <input id="planChapter" placeholder="Chapter" />
+          <button id="addPlanBtn">Add</button>
+        </div>
+        <ul id="planList"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Study Timer</h2>
+        <div class="timer" id="timerDisplay">00:00:00</div>
+        <div class="row">
+          <button id="startTimerBtn">Start</button>
+          <button id="pauseTimerBtn">Pause</button>
+          <button id="resetTimerBtn">Reset</button>
+        </div>
+        <p>Total focused hours this week: <strong id="weeklyHours">0.00</strong></p>
+      </section>
+
+      <section class="card">
+        <h2>Subject-wise Progress</h2>
+        <div id="subjectProgress"></div>
+      </section>
+
+      <section class="card">
+        <h2>Chapter Completion Tracker</h2>
+        <div class="row">
+          <input id="chapterSubject" placeholder="Subject" />
+          <input id="chapterName" placeholder="Chapter name" />
+          <button id="addChapterBtn">Add</button>
+        </div>
+        <ul id="chapterList"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Question Practice Counter</h2>
+        <div class="row">
+          <input id="questionSubject" placeholder="Subject" />
+          <input id="questionCount" type="number" min="1" placeholder="Questions solved" />
+          <button id="addQuestionBtn">Log</button>
+        </div>
+        <ul id="questionSummary"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Revision Tracker</h2>
+        <div class="row">
+          <input id="revisionTopic" placeholder="Topic to revise" />
+          <input id="revisionDate" type="date" />
+          <button id="addRevisionBtn">Set Reminder</button>
+        </div>
+        <ul id="revisionList"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Backlog Tracker</h2>
+        <div class="row">
+          <input id="backlogTopic" placeholder="Unfinished chapter/topic" />
+          <button id="addBacklogBtn">Add</button>
+        </div>
+        <ul id="backlogList"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Exam Countdown</h2>
+        <div class="row">
+          <label for="examDate">Board exam date:</label>
+          <input id="examDate" type="date" />
+        </div>
+        <p class="big" id="countdownText">Set your date to begin countdown.</p>
+      </section>
+
+      <section class="card">
+        <h2>Weekly Study Report</h2>
+        <ul id="weeklyReport"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Distraction Log</h2>
+        <div class="row">
+          <input id="distractionReason" placeholder="Phone / Social media / etc." />
+          <input id="distractionMinutes" type="number" min="1" placeholder="Minutes" />
+          <button id="addDistractionBtn">Log</button>
+        </div>
+        <p>Total distraction this week: <strong id="distractionTotal">0</strong> minutes</p>
+        <ul id="distractionList"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Goal Setting</h2>
+        <div class="row">
+          <input id="goalText" placeholder="Daily/weekly target" />
+          <button id="addGoalBtn">Set Goal</button>
+        </div>
+        <ul id="goalList"></ul>
+      </section>
+
+      <section class="card">
+        <h2>Motivation</h2>
+        <blockquote id="motivationQuote"></blockquote>
+        <button id="newQuoteBtn">New Quote</button>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
